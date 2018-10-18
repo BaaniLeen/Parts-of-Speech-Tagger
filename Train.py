@@ -51,7 +51,7 @@ while((i)<len(all_words)):
         tags_tags_bigram[prev_tag].append(tag)
     i+=2
 tags_tags_bigram['<s>']=[]
-# print(tags_tags_bigram['.'])
+
 if('.' in tags_tags_bigram):
     for tag in tags_tags_bigram['.']:
         tags_tags_bigram['<s>'].append(tag)
@@ -99,9 +99,7 @@ for i in tags_tags_bigram:
         if(item=='.' or item=='!' or item=='?'):
             item = '<s>'
         count_tag_output[i][item]=0
-    # for item in array:
-    #     if(item not in count_tag_output[i]):
-    #         count_tag_output[i][item]=0
+
 for i in tags_tags_bigram:
     for occurence in tags_words_bigram[i]:
         if(occurence in count_tag_output[i]):

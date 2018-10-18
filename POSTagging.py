@@ -53,34 +53,6 @@ for i in original:
         temp.append(i)
 original=deepcopy(temp)
 
-# for ind in blank_indices:
-#     del array[ind]
-#     del original[ind]
-# print(blank_indices)
-# print(array)
-
-# demo = "I am a pro programmer ! I hate coding ."
-# demo = demo.lower()
-# array = demo.split() 
-# original = demo.split()
-# for i in range(len(array)):
-#     if(array[i]=='.' or array[i]=='!' or array[i] =='?'):
-#         array[i]='<s>'
-
-
-### EX-TEST now TRAIN
-# sum_for_tag_op={}
-# for item in count_tag_output:
-#     sum=0
-#     for occur_word in count_tag_output[item]:
-#         sum+=(count_tag_output[item][occur_word]+1)
-#     sum_for_tag_op[item]=sum
-
-# for i in tags_tags_bigram:
-#     for item in array:
-#         if(item not in count_tag_output[i]):
-#             count_tag_output[i][item]=0
-
 for item in count_tag_output:
     sum = 0
     for occur_word in count_tag_output[item]:
@@ -152,9 +124,9 @@ for states in count_tag_tag:
         highest_prob_tag_value=viterbi[states]['end']
         highest_prob_tag=states
 
-# print(array[len(array)-1]+" "+highest_prob_tag)
+
 i=len(array)-1
-# print(backpointers)
+
 stack=[]
 while(i>=0):
     printable_op=highest_prob_tag
